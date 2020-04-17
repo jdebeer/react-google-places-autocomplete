@@ -14,7 +14,7 @@ export const injectScript = (apiKey) => {
 
 export const removeScript = () => {
   const script = document.getElementById(SCRIPT_ID);
-  if (script) {
+  if (script && React.isValidElement(script)) {
     document.body.removeChild(script);
   }
 };
